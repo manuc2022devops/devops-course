@@ -1,0 +1,10 @@
+#!/bin/bash
+while read var
+do
+age=`echo $var | awk -F "" {print $NF}`
+if [ $age -gt 40 ]
+then
+echo $var | awk -F "" {print $1}
+fi
+done < employee
+
